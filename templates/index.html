@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rossmann Sales Prediction</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="main-container">
+        <div id="banner">
+            <div class="banner-blob" id="banner-top-left-blob">
+                <img src="{{ url_for('static', filename='images/banner/top_left_blob.png') }}" width="184" height="124" alt="Top-left Blob"/>
+            </div>
+            <div id="banner-name">
+                <img id="banner-img"src="{{ url_for('static', filename='images/banner/banner.png') }}" width="354" height="83" alt="Rossmann Sales Prediction"/>
+            </div>
+            <div class="banner-blob" id="banner-bottom-right-blob">
+                <img src="{{ url_for('static', filename='images/banner/bottom_right_blob.png') }}" width="184" height="124" alt="Bottom-right Blob"/>
+            </div>
+        </div>
+        <div id="content">
+            <div id="description">
+                <!-- <p class="description-text" id="description-rossmann">
+                    Rossmann operates over 3,000 drug stores in 7 European countries. Rossmann store managers are tasked with predicting their daily sales. 
+                </p> -->
+                <p class="description-text" id="description-application">
+                    This web application uses a machine learning algorithm, based on decision tree algorithm, which was trained on historical sales data to predict the total sales of a store within a specified date interval. <!-- Users can input various parameters such as store ID, starting and ending dates of the time interval to refine the predictions.  -->
+                </p>
+            </div>
+            <div id="predictor">
+                <form method="post" action="/predict_api" class="predictor-flex">
+                    <div class="top-row" id="store-selector">
+                        <div class="header">Store</div>
+                        <select name="store-selector-form" class="inp" id="store-selection-list">
+                            <option value="1">1</option>
+                        </select>
+                        <div class="rounded-border top-box"></div>
+                    </div>
+                    <div class="top-row" id="from-date-selector">
+                        <div class="header">From</div>
+                        <input name="from-date-form" id="from-date-selector-input" type="date" required class="inp datepicker" min="2000-01-01" max="2099-12-31" onchange="ChangeToDateMinValue()">
+                        <div class="rounded-border top-box"></div>
+                    </div>
+                    <div class="top-row" id="to-date-selector">
+                        <div class="header">To</div>
+                        <input name="to-date-form" id="to-date-selector-input" type="date" required class="inp datepicker" min="2000-01-01" max="2099-12-31" onchange="ChangeFromDateMaxValue()">
+                        <div class="rounded-border top-box"></div>
+                    </div>
+                    <div class="top-row" id="top-row-button">
+                        <button id="predict-button" type="submit" onmouseover="ChangeButtonColor()" onmouseout="RevertButtonColor()" onmousedown="RevertButtonColor()" onmouseup="ChangeButtonColor()">Predict</button> 
+                    </div>
+                </form>
+                <div class="predictor-flex">
+                    <div class="middle-row" id="total-sales-display">
+                        <div class="header">Total Sales</div>
+                        <p class="inp sales-indicator" id="total-sales-indicator">{{total}}</p>
+                        <div class="rounded-border middle-box"></div>
+                    </div>
+                    <div class="middle-row" id="average-sales-display">
+                        <div class="header">Average Sales</div>
+                        <p class="inp sales-indicator" id="avg-sales-indicator">{{average}}</p>
+                        <div class="rounded-border middle-box"></div>
+                    </div>
+                </div>
+                <!-- <div class="bottom-row" id="visualization">
+                    <div class="header">Visualization</div>
+                    <div class="inp" id="curve-chart"></div>
+                    <div class="rounded-border bottom-box"></div>
+                </div> -->
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer-description">
+                <p class="footer-text" id="footer-text-created">Created by</p>
+                <p class="footer-text" id="footer-text-name">Midhun R</p>
+            </div>
+            <div id="footer-icons">
+                <div id="footer-link">
+                    <a href="https://github.com/connect-midhunr">
+                        <img src="{{ url_for('static', filename='images/icons/github_icon.png') }}" width="16" height="16" alt="Github Link"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/connectmidhunr/">
+                        <img src="{{ url_for('static', filename='images/icons/linkedin_icon.png') }}" width="16" height="16" alt="LinkedIn Link"/>
+                    </a>
+                    <a href="https://medium.com/@connect.midhunr">
+                        <img src="{{ url_for('static', filename='images/icons/medium_icon.png') }}" width="28" height="16" alt="Medium Link"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+<script type="text/javascript" src="{{ url_for('static', filename='script/script.js') }}"></script>
+</html>
