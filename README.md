@@ -43,7 +43,13 @@ The following insights were gained from EDA:
 <li>The prediction of sales using the trained ML model is carried out via a Flask API.</li>
 <li>This web application is deployed with AWS Elastic Beanstalk, employing CI/CD pipeline.</li>
 
-<img class="image-ss" src="Images/WebAppDesktop.jpg" height="300px" alt="WebAppDesktop"> <img class="image-ss" src="Images/WebAppMobile.png" height="300px" alt="WebAppMobile">
+**WebApp Desktop Glimpse:**
+
+<img class="image-ss" src="Images/WebAppDesktop.jpg" height="300px" alt="WebAppDesktop">
+
+**Mobile Version Glimpse:**
+
+<img class="image-ss" src="Images/WebAppMobile.png" height="300px" alt="WebAppMobile">
 
 Link to deployed model: http://rossmannsalesprediction-env-1.eba-3wi97vqp.ap-south-1.elasticbeanstalk.com/
 
