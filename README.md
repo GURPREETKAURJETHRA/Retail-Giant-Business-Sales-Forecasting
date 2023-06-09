@@ -1,3 +1,6 @@
+# **Retail-Giant-Business-Sales-Forecasting**
+Help a retail giant to have a clear cut idea on how their sales will look in the future. Build model to forecast the sales for the global store.
+
 <p align="center"> 
   <img src="Images/banner_ross_transparent.png" alt="Banner">
   Link to deployed model: http://rossmannsalesprediction-env-1.eba-3wi97vqp.ap-south-1.elasticbeanstalk.com/
@@ -58,16 +61,6 @@ The following conclusions were drawn from Modelling:
 <li>The model built using decision tree algorithm is the most accurate one. This can be attributed to higher number of categorical features in the data.</li>
 <li>Decision tree based algorithms are slightly more accurate than linear regression based algorithms.</li>
 
-## :scroll: Credits
-
-Midhun R | Avid Learner | Data Analyst | Data Scientist | Machine Learning Enthusiast
-<p> <i> Contact me for Data Science Project Collaborations</i></p>
-
-
-[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/connectmidhunr/)
-[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/connect-midhunr/)
-[![Medium Badge](https://img.shields.io/badge/Medium-1DA1F2?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@connect.midhunr/)
-[![Resume Badge](https://img.shields.io/badge/resume-0077B5?style=for-the-badge&logo=resume&logoColor=white)](https://drive.google.com/file/d/1Bho0SK8U3PMCK5UEyVEYnrNM9IYUUzcV/view?usp=sharing)
 
 ## :books: References
 <ul>
@@ -81,3 +74,8 @@ Midhun R | Avid Learner | Data Analyst | Data Scientist | Machine Learning Enthu
       <p>Available: https://www.analyticsvidhya.com/blog/2021/08/decision-tree-algorithm/</p>
   </li>
 </ul>
+
+### Acknowledgement:
+This Project Assignment was part of Curriculum during **EPGP-DataScience AI-ML (Deep Learning Spec) from IIIT-B.**
+
+***@All Rights Reserved*** [**Gurpreet Kaur Jethra**](https://github.com/GURPREETKAURJETHRA)
